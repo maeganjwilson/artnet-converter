@@ -51,6 +51,8 @@ class CalculationManager: ObservableObject {
     subnet = art
   }
   
+  /// Adds a number to the primary universe like in a calculator
+  /// - Parameter num: This is the number to add
   func addNumberToPrimUni(_ num: Int){
     let universe: Bool = !set.returnDefaults("zeroUni")
     let art: Bool = !set.returnDefaults("zeroArt")
@@ -62,6 +64,7 @@ class CalculationManager: ObservableObject {
     if prim_uni > 255 {
       prim_uni = 255
     }
+    
     calcAll(uniIsZero: universe, artIsZero: art)
   }
   
@@ -103,49 +106,22 @@ class CalculationManager: ObservableObject {
     calcAll(uniIsZero: universe, artIsZero: art)
   }
   
-  func calcSub(add: Int){
-    subnet = (prim_uni/16) + add
+  func calcSub(){
+    subnet = (prim_uni/16)
   }
   
-  func calcArtUni(add: Int){
-    art_uni = (prim_uni % 16) + add
+  func calcArtUni(){
+    art_uni = (prim_uni % 16)
   }
   
   func calcAll(uniIsZero: Bool, artIsZero: Bool){
-    if uniIsZero {
-      if artIsZero {
-        if prim_uni == 0 {
-          subnet = 0
-          art_uni = 0
-        } else if prim_uni % 16 == 0 {
-          calcSub(add: -1)
-          art_uni = 15
-        } else {
-          calcSub(add: 0)
-          calcArtUni(add: 0)
-        }
-      } else {
-        calcSub(add: 1)
-        calcArtUni(add: 1)
-      }
+    
+    if prim_uni == 0 {
+      art_uni = 0
+      subnet = 0
     } else {
-      if artIsZero {
-        if prim_uni % 16 == 0 {
-          calcSub(add: -1)
-          art_uni = 15
-        } else {
-          calcSub(add: 0)
-          calcArtUni(add: -1)
-        }
-      } else {
-        if prim_uni % 16 == 0 {
-          calcSub(add: 0)
-          calcArtUni(add: 16)
-        }else {
-          calcSub(add: 1)
-          calcArtUni(add: 0)
-        }
-      }
+      calcSub()
+      calcArtUni()
     }
   }
   
