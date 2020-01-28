@@ -71,29 +71,13 @@ class CalculationManager: ObservableObject {
   func deleteNumberFromPrimUni(_ num: Int){
     let universe: Bool = !set.returnDefaults("zeroUni")
     let art: Bool = !set.returnDefaults("zeroArt")
-    
-    if !universe {
-      // 1 based
-      if prim_uni < 20 && prim_uni > 1 {
-        prim_uni = 1
-      } else if prim_uni == 1 || prim_uni == 0{
-        prim_uni = 0
-      } else {
-        var originalStr = "\(prim_uni)"
-        originalStr.removeLast()
-        
-        prim_uni = Int(originalStr)!
-      }
+    if prim_uni < 10 {
+      prim_uni = 0
     } else {
-      // 0 based
-      if prim_uni < 10 {
-        prim_uni = 0
-      } else {
-        var originalStr = "\(prim_uni)"
-        originalStr.removeLast()
-        
-        prim_uni = Int(originalStr)!
-      }
+      var originalStr = "\(prim_uni)"
+      originalStr.removeLast()
+      
+      prim_uni = Int(originalStr)!
     }
     
     calcAll(uniIsZero: universe, artIsZero: art)
@@ -126,8 +110,6 @@ class CalculationManager: ObservableObject {
   }
   
   func saveCalculation() {
-    let universe: Bool = set.returnDefaults("zeroUni")
-    let art: Bool = set.returnDefaults("zeroArt")
     
     let newCalc = CalcEntity(context: managedContext)
     newCalc.artuni = Int64(art_uni)
@@ -135,8 +117,8 @@ class CalculationManager: ObservableObject {
     newCalc.priuni = Int64(prim_uni)
     newCalc.id = UUID()
     newCalc.date = Date()
-    newCalc.isZeroUni = universe
-    newCalc.isZeroArt = art
+    newCalc.isZeroUni = true
+    newCalc.isZeroArt = true
     
     do {
       try self.managedContext.save()
