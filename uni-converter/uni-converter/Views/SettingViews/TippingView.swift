@@ -26,11 +26,11 @@ struct TippingView: View {
         VStack{
             Text("If you enjoy using the app, please consider giving Maegan a tip using an in-app purchase. Your support is greatly appreciated.")
             List{
-                HStack{
-                    Text("Total Tipped")
-                    Spacer()
-                    Text("")
-                }
+//                HStack{
+//                    Text("Total Tipped")
+//                    Spacer()
+//                    Text("")
+//                }
                 ForEach(self.products, id: \.productIdentifier){ product in
                     TippingRow(product: product)
                 }
