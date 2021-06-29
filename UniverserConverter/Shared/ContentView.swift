@@ -14,7 +14,7 @@ struct ContentView: View {
                 .tabItem{
                     Image(systemName: "square.grid.3x3")
                 }
-            Text("History")
+            HistoryView()
                 .tabItem{
                     Image(systemName: "book")
                 }
@@ -23,6 +23,7 @@ struct ContentView: View {
                     Image(systemName: "info.circle")
                 }
         }
+            .transition(.opacity)
     }
 }
 

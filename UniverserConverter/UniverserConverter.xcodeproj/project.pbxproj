@@ -19,6 +19,7 @@
 		151ED70F268B52B100EF0A4B /* CalculateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED70E268B52B100EF0A4B /* CalculateView.swift */; };
 		151ED711268B52E600EF0A4B /* CalculateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED70E268B52B100EF0A4B /* CalculateView.swift */; };
 		151ED712268B52EB00EF0A4B /* NumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED709268B4AEA00EF0A4B /* NumberButtonView.swift */; };
+		15298D27268B7F38008FBE3A /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15298D26268B7F38008FBE3A /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		151ED6F2268B48B800EF0A4B /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		151ED709268B4AEA00EF0A4B /* NumberButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberButtonView.swift; sourceTree = "<group>"; };
 		151ED70E268B52B100EF0A4B /* CalculateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateView.swift; sourceTree = "<group>"; };
+		15298D26268B7F38008FBE3A /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 		15298D25268B7EF7008FBE3A /* HistoryViews */ = {
 			isa = PBXGroup;
 			children = (
+				15298D26268B7F38008FBE3A /* HistoryView.swift */,
 			);
 			path = HistoryViews;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			files = (
 				151ED6F6268B48B800EF0A4B /* ContentView.swift in Sources */,
 				151ED6F4268B48B800EF0A4B /* UniverserConverterApp.swift in Sources */,
+				15298D27268B7F38008FBE3A /* HistoryView.swift in Sources */,
 				151ED70A268B4AEA00EF0A4B /* NumberButtonView.swift in Sources */,
 				151ED70F268B52B100EF0A4B /* CalculateView.swift in Sources */,
 			);
