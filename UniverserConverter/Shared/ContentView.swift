@@ -9,7 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        CalculateView()
+        TabView {
+            CalculateView()
+                .tabItem{
+                    Image(systemName: "square.grid.3x3")
+                }
+            Text("History")
+                .tabItem{
+                    Image(systemName: "book")
+                }
+            Text("Settings")
+                .tabItem{
+                    Image(systemName: "info.circle")
+                }
+        }
     }
 }
 
