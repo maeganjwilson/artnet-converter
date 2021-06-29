@@ -135,6 +135,7 @@
 		151ED708268B4A7200EF0A4B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				15298D25268B7EF7008FBE3A /* HistoryViews */,
 				151ED710268B52CE00EF0A4B /* CalculateViews */,
 			);
 			path = Views;
@@ -147,6 +148,13 @@
 				151ED70E268B52B100EF0A4B /* CalculateView.swift */,
 			);
 			path = CalculateViews;
+			sourceTree = "<group>";
+		};
+		15298D25268B7EF7008FBE3A /* HistoryViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HistoryViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -15,6 +15,7 @@ struct NumberButtonView: View {
                 RoundedRectangle(cornerRadius: 5)
                     .aspectRatio(1.0, contentMode: .fit)
                 Text("\(number)")
+                    .font(.system(.body, design: .monospaced))
                     .foregroundColor(.primary)
                     .frame(minWidth: 10,
                            idealWidth: 15,

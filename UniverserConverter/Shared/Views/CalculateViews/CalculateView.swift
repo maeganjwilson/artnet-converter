@@ -32,6 +32,7 @@ struct CalculateView: View {
                         .font(.system(size: 50, weight: .bold, design: .monospaced))
                 }
             }.padding()
+            
             Spacer()
             // Primary Universe
             VStack(alignment: .leading){
@@ -94,7 +95,45 @@ struct CalculateView: View {
                 }
                 
                 HStack{
+                    Button(action: {print("<-")}) {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 5)
+                                .aspectRatio(1.0, contentMode: .fit)
+                            Text("DEL")
+                                .font(.system(.body, design: .monospaced))
+                                .foregroundColor(.primary)
+                                .frame(minWidth: 10,
+                                       idealWidth: 15,
+                                       maxWidth: 50,
+                                       minHeight: 10,
+                                       idealHeight: 15,
+                                       maxHeight: 50,
+                                       alignment: .center)
+                                .aspectRatio(1.0, contentMode: .fit)
+                                .background(.thickMaterial, in: RoundedRectangle(cornerRadius: 5))
+                        }
+                    }.padding()
+                        .accentColor(.red)
                     NumberButtonView(number: 0)
+                    Button(action: {print("<-")}) {
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 5)
+                                .aspectRatio(1.0, contentMode: .fit)
+                            Text("CALC")
+                                .font(.system(.body, design: .monospaced))
+                                .foregroundColor(.primary)
+                                .frame(minWidth: 10,
+                                       idealWidth: 15,
+                                       maxWidth: 50,
+                                       minHeight: 10,
+                                       idealHeight: 15,
+                                       maxHeight: 50,
+                                       alignment: .center)
+                                .aspectRatio(1.0, contentMode: .fit)
+                                .background(.thickMaterial, in: RoundedRectangle(cornerRadius: 5))
+                        }
+                    }.padding()
+                        .accentColor(.green)
                 }
             }
         }
