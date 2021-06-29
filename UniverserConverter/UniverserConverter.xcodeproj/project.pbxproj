@@ -17,6 +17,8 @@
 		151ED6F9268B48B800EF0A4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 151ED6D4268B48B800EF0A4B /* Assets.xcassets */; };
 		151ED70A268B4AEA00EF0A4B /* NumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED709268B4AEA00EF0A4B /* NumberButtonView.swift */; };
 		151ED70F268B52B100EF0A4B /* CalculateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED70E268B52B100EF0A4B /* CalculateView.swift */; };
+		151ED711268B52E600EF0A4B /* CalculateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED70E268B52B100EF0A4B /* CalculateView.swift */; };
+		151ED712268B52EB00EF0A4B /* NumberButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151ED709268B4AEA00EF0A4B /* NumberButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -317,6 +319,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				151ED6F7268B48B800EF0A4B /* ContentView.swift in Sources */,
+				151ED712268B52EB00EF0A4B /* NumberButtonView.swift in Sources */,
+				151ED711268B52E600EF0A4B /* CalculateView.swift in Sources */,
 				151ED6F5268B48B800EF0A4B /* UniverserConverterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

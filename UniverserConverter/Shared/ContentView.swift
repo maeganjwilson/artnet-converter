@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NumberButtonView(number: 1)
-            .padding()
+        CalculateView()
     }
 }
 
